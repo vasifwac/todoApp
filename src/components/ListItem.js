@@ -7,7 +7,6 @@ export default function ListItem({ item, handleDelete, index }) {
             <li>{index+1}  {item}
                 <DeleteModal
                     index={index}
-                   
                     className="deleteModal"
                     handleDelete={()=>handleDelete(item)}
                 />
