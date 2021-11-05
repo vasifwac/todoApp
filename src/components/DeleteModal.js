@@ -11,7 +11,7 @@ export default function DeleteModal({ handleDelete, className }) {
 
     return (
         <div className={className}>
-            <i class="far fa-trash-alt" onClick={handleShow} />
+            <i className="far fa-trash-alt" onClick={handleShow} />
 
             <Modal show={show} onHide={handleClose}>
 
