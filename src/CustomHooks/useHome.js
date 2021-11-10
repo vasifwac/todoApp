@@ -8,7 +8,6 @@ export const useHome = () => {
         setInputItems(temp)
     }
 
-
     const handleDelete = (item) => {
         setInputItems(inputItems.filter((todo) => {
             return todo !== item
