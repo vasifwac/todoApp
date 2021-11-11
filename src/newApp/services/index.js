@@ -15,7 +15,7 @@ export const isLogin = () => {
 export const login = (data) => {
     if (data.username === Credintials.username) {
         if (data.password === Credintials.password) {
-            localStorage.setItem('access', Credintials.username)
+            localStorage.setItem('access', true)
             return 'success'
         }
         else {

@@ -29,8 +29,8 @@ export default function useSignIn() {
             }
             let res = login(data)
             if (res === 'success') {
-                if(inputError) setInputError(false)
-                navigate('/dashboard')
+                if (inputError) setInputError(false)
+                navigate('/pageOne')
             }
             else {
                 setInputError(true)
@@ -41,6 +41,6 @@ export default function useSignIn() {
         }
     }
 
-    return [handleChange, handleSubmit,inputError]
+    return [handleChange, handleSubmit, inputError]
 
 }

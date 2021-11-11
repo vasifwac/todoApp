@@ -24,8 +24,6 @@ function App() {
           <Route path="/pageTwo" element={<PageTwo />} />
           <Route path="/pageThree" element={<PageThree />} />
           <Route path="/pageFour" element={<PageFour />} />
-
-
         </Routes>
       </BrowserRouter>
 

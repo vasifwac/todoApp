@@ -2,32 +2,77 @@
     height: 300px;
 }
 
-body{
+body {
     overflow: hidden;
+    margin: 0;
 }
 
-.side-nav{
+.logo{
+    width: 50px;
+    height: 50px;
+}
+.side-nav {
     background-color: lightgreen;
     height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 10px;
 }
 
-.side-nav Nav.Link{
-    color: linen;
+@media (max-width: 500px) {
+    .side-nav {
+        width: 100%;
+        position: relative;
+        height: 40vh;
+        padding: 0;
+    }
+    .side-nav-navlink {
+        float: left;
+    }
+    .nav-link{
+        padding-bottom: 5px;
+    }
+    body {
+        width: 100%;
+        margin: 0;
+    }
 }
 
+.nav-link{
+    padding-bottom: 30px;
+}
 
-.fixToBottom{
+.nav-link.active {
+    color: black;
+    background-color: #EDF5E1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.fixToBottom {
     position: fixed;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color:#EDF5E1;   
-   
+    background-color: #EDF5E1;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
 }
 
+.fixToBottom .socialIcons {
+    display: flex;
+    flex-direction: row;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: -16px;
+}
 
-
+.socialIcons p {
+    padding: 10px;
+}

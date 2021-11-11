@@ -2,13 +2,13 @@ import React from 'react'
 import { Row, Form, Col, Button } from 'react-bootstrap'
 import Footer from '../components/Footer'
 import NavBarHead from '../components/NavBarHead'
-import { login } from '../services'
 import useSignIn from './hooks/useSignIn'
+import { LogIn } from 'react-feather'
 
 
 export default function SignIn() {
 
-    const [handleChange, handleSubmit, inputError] = useSignIn({ login })
+    const [handleChange, handleSubmit, inputError] = useSignIn()
 
     return (
         <>
@@ -17,10 +17,18 @@ export default function SignIn() {
                 <Col></Col>
                 <Col className="p-3 mt-5" md={4}>
                     <Form onSubmit={handleSubmit}>
-                        <h2 className="d-flex justify-content-center" >Log In</h2>
+                        <div>
+                            <h3 className="d-flex justify-content-center" > <LogIn size={22} className="mt-2"/>Log In</h3>
+                        </div>
                         <Form.Group className="mb-3" controlId="username" >
 
-                            <Form.Control type="text" isInvalid={inputError} onChange={(e) => handleChange(e)} placeholder="Enter email" />
+                            <Form.Control
+                                type="text"
+                                autoComplete="off"
+                                isInvalid={inputError}
+                                onChange={(e) => handleChange(e)}
+                                placeholder="Enter email" />
+
                             <Form.Text className="text-muted">
                                 use "admin" as username
                             </Form.Text>
@@ -31,7 +39,13 @@ export default function SignIn() {
 
                         <Form.Group className="mb-3" controlId="password"  >
 
-                            <Form.Control type="password" isInvalid={inputError} onChange={(e) => handleChange(e)} placeholder="Password" />
+                            <Form.Control
+                                type="password"
+                                autoComplete="off"
+                                isInvalid={inputError}
+                                onChange={(e) => handleChange(e)}
+                                placeholder="Password" />
+
                             <Form.Text className="text-muted">
                                 use "password" as password
                             </Form.Text>
@@ -40,9 +54,11 @@ export default function SignIn() {
                             </Form.Control.Feedback>
                         </Form.Group>
 
-                        <Button variant="success" type="submit">
-                            Submit
-                        </Button>
+                        <div className="d-flex justify-content-center">
+                            <Button className="w-100" variant="success" type="submit">
+                                Login
+                            </Button>
+                        </div>
                     </Form>
                 </Col>
                 <Col></Col>
