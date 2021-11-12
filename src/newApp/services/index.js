@@ -1,16 +1,17 @@
 import Credintials from '../constants/credintials.json'
 
 export const isLogin = () => {
-    if (localStorage.getItem('access')) {
+    let res = localStorage.getItem('access')
+    if (res) {
         return true
     }
     return false
 }
 
-// export const logout = () => {
-//     localStorage.removeItem('access')
-//     return true
-// }
+export const logout = () => {
+    localStorage.removeItem('access')
+    return true
+}
 
 export const login = (data) => {
     if (data.username === Credintials.username) {

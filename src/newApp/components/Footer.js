@@ -1,5 +1,4 @@
 import React from 'react'
-import { Row, Button } from 'react-bootstrap'
 import { Facebook, Instagram, Youtube, Linkedin, Twitter } from 'react-feather'
 
 export default function Footer() {
